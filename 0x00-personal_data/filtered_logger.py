@@ -72,7 +72,9 @@ def main() -> None:
     logger = get_logger()
 
     for row in cursor:
-        message = "; ".join(f"{header}={value}" for header, value in zip(headers, row)) + ";"
+        message = "; ".join(
+            f"{header}={value}" for header, value in zip(headers, row)
+            ) + ";"
         logger.info(message)
 
     cursor.close()
