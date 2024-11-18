@@ -6,7 +6,8 @@ import logging
 import mysql.connector
 import os
 
-PII_FIELDS = ("name", "email", "password", "ssn", "phone")  # Module-level tuple
+PII_FIELDS = ("name", "email", "password", "ssn", "phone")
+# Module-level tuple
 
 
 class RedactingFormatter(logging.Formatter):
